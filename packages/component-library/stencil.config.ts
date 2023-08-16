@@ -9,17 +9,9 @@ export const config: Config = {
       componentCorePackage: 'component-library',
       proxiesFile: '../component-library-react/src/components.ts',
     }),
-    {
-      type: 'dist-custom-elements',
-      dir: 'components'
-    },
-    {
-      type: 'dist',
-      esmLoaderPath: '../loader',
-    },
-    {
-      type: 'docs-readme',
-    },
+    { type: 'dist-custom-elements' },
+    { type: 'dist' },
+    { type: 'docs-readme' },
     {
       type: 'www',
       serviceWorker: null, // disable service workers
