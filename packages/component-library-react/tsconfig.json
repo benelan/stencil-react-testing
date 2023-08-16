@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "strict": true,
     "allowUnreachableCode": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
@@ -8,7 +7,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "lib": ["dom", "es2015"],
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -16,13 +15,9 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "removeComments": false,
-    "sourceMap": true,
-    "skipLibCheck": true,
     "jsx": "react",
-    "target": "es2015"
+    "target": "es2015",
+    "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["./__tests__/**", "node_modules", "setupTests.ts"],
-  "compileOnSave": false,
-  "buildOnSave": false
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

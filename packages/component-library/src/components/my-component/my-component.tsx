@@ -1,8 +1,8 @@
-import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop, h, Event, EventEmitter, Build } from "@stencil/core";
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: "my-component",
+  styleUrl: "my-component.css",
   shadow: true,
 })
 export class MyComponent {
@@ -36,6 +36,12 @@ export class MyComponent {
    */
   @Event() myCustomEvent: EventEmitter<number>;
 
+  connectedCallback() {
+    if (Build.isBrowser) {
+      console.log(navigator.userAgent);
+    }
+  }
+
   emitCustomEvent() {
     this.myCustomEvent.emit(5);
   }
@@ -45,6 +51,10 @@ export class MyComponent {
   }
 
   render() {
-    return <div onClick={this.emitCustomEvent.bind(this)}>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <div onClick={this.emitCustomEvent.bind(this)}>
+        Hello, World! I'm {this.getText()}
+      </div>
+    );
   }
 }
