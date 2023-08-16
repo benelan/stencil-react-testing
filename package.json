@@ -1,16 +1,13 @@
 {
   "name": "stencil-react-vitetest",
   "private": true,
+  "version": "0.1.0",
   "workspaces": [
     "packages/*",
     "app"
   ],
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "lerna run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "lerna run build"
   },
   "nx": {
     "targets": {

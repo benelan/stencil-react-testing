@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import App from "./main";
+import App from "./App";
 
 it("does not error", () => {
   render(<App />);
-  screen.queryByText("Test");
+  screen.queryByText("Hello, World!");
 });
