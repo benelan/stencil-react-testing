@@ -1,5 +1,5 @@
 {
-  "name": "stencil-react-vitest",
+  "name": "stencil-react-vite",
   "version": "0.1.0",
   "private": true,
   "type": "module",
