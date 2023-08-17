@@ -1,7 +1,7 @@
 {
   "name": "component-library-react",
   "sideEffects": false,
-  "version": "0.0.4",
+  "version": "4.20.69",
   "private": true,
   "description": "React specific wrapper for component-library",
   "license": "MIT",
@@ -10,13 +10,10 @@
     "url": "https://github.com/ionic-team/stencil-ds-output-targets.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "rimraf dist",
-    "compile": "npm run tsc",
+    "build": "rimraf dist && npm run tsc",
     "tsc": "tsc -p .",
-    "prettier": "npm run prettier.base -- --write",
-    "prettier.base": "prettier \"./({src,__tests__}/**/*.{ts,tsx,js,jsx})|*.{ts,tsx,js,jsx}\"",
-    "prettier.dry-run": "npm run prettier.base -- --list-different"
+    "clean": "rimraf dist node_modules",
+    "prettier": "prettier --write \"./({src,__tests__}/**/*.{ts,tsx,js,jsx})|*.{ts,tsx,js,jsx}\""
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -29,12 +26,11 @@
     "@types/react-dom": "^16.0.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "rimraf": "^4.2.0",
     "rollup": "^1.21.2",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
-    "component-library": "^0.0.4"
+    "component-library": "4.20.69"
   },
   "peerDependencies": {
     "react": "^16.7.0",

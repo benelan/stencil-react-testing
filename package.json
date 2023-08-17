@@ -1,13 +1,15 @@
 {
-  "name": "stencil-react-vitetest",
+  "name": "stencil-react-repros",
   "private": true,
   "version": "0.1.0",
   "workspaces": [
     "packages/*",
-    "app"
+    "apps/*"
   ],
   "scripts": {
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "clean": "lerna run clean && rimraf node_modules",
+    "prettier": "leran run prettier"
   },
   "nx": {
     "targets": {
@@ -20,6 +22,8 @@
   },
   "devDependencies": {
     "lerna": "^7.1.5",
+    "prettier": "^3.0.2",
+    "rimraf": "^4.2.0",
     "typescript": "^4.9.5"
   },
   "engines": {
