@@ -3,6 +3,7 @@ import { reactOutputTarget } from "@stencil/react-output-target";
 
 export const config: Config = {
   namespace: "component-library",
+  extras: { enableImportInjection: true, scriptDataOpts: true },
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: "component-library",
