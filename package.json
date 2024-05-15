@@ -8,6 +8,8 @@
   ],
   "scripts": {
     "build": "lerna run build",
+    "dev:vite": "npm --workspace stencil-react-vite run dev",
+    "dev:next": "npm --workspace stencil-react-nextjs run dev",
     "clean": "lerna run clean && rimraf node_modules",
     "prettier": "leran run prettier"
   },
@@ -21,16 +23,16 @@
     }
   },
   "devDependencies": {
-    "lerna": "^7.1.5",
-    "prettier": "^3.0.2",
-    "rimraf": "^4.2.0",
+    "lerna": "^8.1.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.7",
     "tsx": "^4.10.2",
-    "typescript": "^4.9.5"
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=16.0.0"
   },
   "volta": {
-    "node": "18.17.1"
+    "node": "20.13.1"
   }
 }

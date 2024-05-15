@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "rimraf dist && npm run tsc",
+    "patch:jsx-import": "tsx support/patchJsxImport.ts",
     "tsc": "tsc -p . --outDir ./dist",
     "clean": "rimraf dist node_modules"
   },
@@ -22,11 +23,11 @@
     "dist/"
   ],
   "devDependencies": {
-    "@types/react": "^16.7.6",
-    "@types/react-dom": "^16.0.9",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "rollup": "^1.21.2",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup": "^4.17.2",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
