@@ -6,17 +6,18 @@ export const config: Config = {
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: "component-library",
-      proxiesFile: "../component-library-react/src/components.ts",
+      proxiesFile: "../react-library/lib/components/stencil-generated/index.ts",
       customElementsDir: "dist/components",
-      includeImportCustomElements: true,
     }),
     { type: "dist-hydrate-script" },
-    { type: "dist-custom-elements", autoDefineCustomElements: true },
+    {
+      type: "dist-custom-elements",
+      customElementsExportBehavior: "auto-define-custom-elements",
+    },
     { type: "dist" },
     { type: "docs-readme" },
-    {
-      type: "www",
-      serviceWorker: null, // disable service workers
-    },
+    { type: "docs-json", file: "./dist/extras/docs-json.json" },
+    { type: "docs-vscode", file: "./dist/extras/vscode-data.json" },
+    { type: "www", serviceWorker: { unregister: true } },
   ],
 };

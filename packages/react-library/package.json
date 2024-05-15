@@ -1,23 +1,23 @@
 {
-  "name": "component-library-react",
+  "name": "react-library",
   "sideEffects": false,
   "version": "4.20.69",
   "private": true,
   "description": "React specific wrapper for component-library",
+  "homepage": "https://stenciljs.com/docs/react",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-ds-output-targets.git"
+    "url": "https://github.com/benelan/stencil-react-testing.git"
   },
   "scripts": {
     "build": "rimraf dist && npm run tsc",
-    "tsc": "tsc -p .",
-    "clean": "rimraf dist node_modules",
-    "prettier": "prettier --write \"./({src,__tests__}/**/*.{ts,tsx,js,jsx})|*.{ts,tsx,js,jsx}\""
+    "tsc": "tsc -p . --outDir ./dist",
+    "clean": "rimraf dist node_modules"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -30,7 +30,7 @@
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
-    "component-library": "4.20.69"
+    "component-library": "*"
   },
   "peerDependencies": {
     "react": "^16.7.0",

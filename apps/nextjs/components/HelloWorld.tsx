@@ -1,4 +1,4 @@
-import { MyButton, MyComponent } from "component-library-react";
+import { MyButton, MyComponent } from "react-library";
 
 const HelloWorld = () => {
   return (

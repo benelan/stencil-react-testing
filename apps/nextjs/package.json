@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "component-library": "4.20.69",
-    "component-library-react": "4.20.69",
+    "react-library": "4.20.69",
     "next": "13.4.17",
     "react": "18.2.0",
     "react-dom": "18.2.0"
